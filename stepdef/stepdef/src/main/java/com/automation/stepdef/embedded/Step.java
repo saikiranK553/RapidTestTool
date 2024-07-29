@@ -1,17 +1,16 @@
 package com.automation.stepdef.embedded;
 
+import java.util.List;
+
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Data
+@Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-@Embeddable
-public class ParamValues {
-	private int id;
-	private String key;
-	private String hint;
-	private String type;
+public class Step {
+	private String stepDefId;
+	private List<ParamValues> paramValues;
 }

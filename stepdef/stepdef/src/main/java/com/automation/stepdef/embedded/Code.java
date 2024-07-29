@@ -6,12 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-@Embeddable
-public class ParamValues {
-	private int id;
-	private String key;
-	private String hint;
-	private String type;
+public class Code {
+	private String header;
+	private String body;
+	private String footer;
 }
